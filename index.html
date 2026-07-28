@@ -73,6 +73,35 @@
     gap: 18px;
   }
 
+  /* Mobile-first: .columns stacks its section children normally (no column-count set).
+     Desktop breakpoints below turn it into a newspaper-style multi-column layout, so
+     future content swaps (different section lengths each week) still reflow cleanly
+     without any manual column assignment. */
+  .columns > section {
+    margin-bottom: 18px;
+  }
+  .columns > section:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 760px) {
+    .sheet { max-width: 720px; }
+    .stats { grid-template-columns: repeat(4, 1fr); }
+    .columns {
+      column-count: 2;
+      column-gap: 18px;
+    }
+    .columns > section {
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .sheet { max-width: 1080px; }
+    .columns { column-count: 3; }
+  }
+
   header.top {
     display: flex;
     flex-direction: column;
@@ -389,6 +418,8 @@
     </div>
   </div>
 
+  <div class="columns">
+
   <section>
     <div class="section-title">Seuils de prix <span class="note">±7 / ±10 / ±15 %</span></div>
     <div class="card">
@@ -561,6 +592,8 @@
       </div>
     </div>
   </section>
+
+  </div>
 
   <footer>
     Relevé strictement factuel — <strong>aucune recommandation</strong> de prix d'ordre, d'allocation ou d'achat/vente. La décision reste entièrement manuelle. Prochain relevé : dimanche 02.08, avec comparaison sur seuils. Fonds ERES revérifiés le 28.08 (cadence mensuelle, valorisation non quotidienne).
