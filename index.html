@@ -1,0 +1,501 @@
+<title>Veille finance perso — semaine du 28 juillet 2026</title>
+<style>
+  :root {
+    --bg: #f1efe9;
+    --surface: #ffffff;
+    --ink: #1c2420;
+    --muted: #756f62;
+    --accent: #8b6a2f;
+    --accent-soft: #ede0c4;
+    --up: #2e7d4f;
+    --down: #b23a2e;
+    --border: #e1ddd1;
+    --shadow: 0 1px 2px rgba(28,36,32,0.04), 0 6px 20px rgba(28,36,32,0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15140f;
+      --surface: #1d1b15;
+      --ink: #eee9dd;
+      --muted: #a79c87;
+      --accent: #d4ac4a;
+      --accent-soft: #3a331f;
+      --up: #57b37b;
+      --down: #e1685b;
+      --border: #322e23;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15140f;
+    --surface: #1d1b15;
+    --ink: #eee9dd;
+    --muted: #a79c87;
+    --accent: #d4ac4a;
+    --accent-soft: #3a331f;
+    --up: #57b37b;
+    --down: #e1685b;
+    --border: #322e23;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"] {
+    --bg: #f1efe9;
+    --surface: #ffffff;
+    --ink: #1c2420;
+    --muted: #756f62;
+    --accent: #8b6a2f;
+    --accent-soft: #ede0c4;
+    --up: #2e7d4f;
+    --down: #b23a2e;
+    --border: #e1ddd1;
+    --shadow: 0 1px 2px rgba(28,36,32,0.04), 0 6px 20px rgba(28,36,32,0.05);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, "Avenir Next", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    padding: 28px 14px 60px;
+  }
+
+  .sheet {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  header.top {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 4px 2px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  h1 {
+    font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .chiprow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.74rem;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+    border: 1px solid transparent;
+  }
+  .chip.outline {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .stat .label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .stat .value {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 1.18rem;
+    font-weight: 600;
+  }
+
+  .stat .sub {
+    font-size: 0.76rem;
+    color: var(--muted);
+  }
+  .stat .sub.down { color: var(--down); }
+  .stat .sub.up { color: var(--up); }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-title {
+    font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .section-title .note {
+    font-family: ui-sans-serif, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--muted);
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 11px 14px;
+  }
+  .row + .row { border-top: 1px solid var(--border); }
+
+  .row .name {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .row .name .title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .row .name .meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .row .figure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+  .row .figure .price {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+  .row .figure .delta {
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+  .delta.up { color: var(--up); }
+  .delta.down { color: var(--down); }
+  .delta.flat { color: var(--muted); font-weight: 500; }
+
+  .spotlight {
+    background: var(--surface);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .spotlight .title {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .spotlight .isin {
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .spotlight .desc {
+    font-size: 0.84rem;
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  .spotlight .facts {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+  }
+  .spotlight .facts .f {
+    font-size: 0.74rem;
+    color: var(--muted);
+  }
+  .spotlight .facts .f b {
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .news-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 14px;
+  }
+  .news-group + .news-group { border-top: 1px solid var(--border); }
+  .news-group .cat {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .news-group p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .news-group a {
+    color: inherit;
+    text-decoration-color: var(--border);
+    text-underline-offset: 2px;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+  .tl-item {
+    display: grid;
+    grid-template-columns: 64px 16px 1fr;
+    padding: 10px 14px;
+    gap: 2px;
+  }
+  .tl-item + .tl-item { border-top: 1px solid var(--border); }
+  .tl-date {
+    font-size: 0.74rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    padding-top: 1px;
+  }
+  .tl-dot-col {
+    display: flex;
+    justify-content: center;
+  }
+  .tl-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 5px;
+  }
+  .tl-body .ev-title {
+    font-size: 0.86rem;
+    font-weight: 600;
+  }
+  .tl-body .ev-meta {
+    font-size: 0.74rem;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  footer {
+    padding: 14px 4px 4px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  footer strong { color: var(--ink); }
+</style>
+
+<div class="sheet">
+
+  <header class="top">
+    <div class="eyebrow">Veille finance perso · relevé du 28.07.2026</div>
+    <h1>Semaine du 28 juillet</h1>
+    <div class="chiprow">
+      <span class="chip">Profil dynamique</span>
+      <span class="chip outline">Initié</span>
+      <span class="chip outline">Premier relevé — sert de référence</span>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="label">Patrimoine net</div>
+      <div class="value">60 564 €</div>
+      <div class="sub up">+1 171 € sur 1 an</div>
+    </div>
+    <div class="stat">
+      <div class="label">Livret A</div>
+      <div class="value">17 932 €</div>
+      <div class="sub">objectif 12 000 € · +5 932 € à réallouer</div>
+    </div>
+    <div class="stat">
+      <div class="label">BTC</div>
+      <div class="value">$63 707</div>
+      <div class="sub down">-2,5 % cette semaine</div>
+    </div>
+    <div class="stat">
+      <div class="label">ETH</div>
+      <div class="value">$1 891</div>
+      <div class="sub down">-3,2 % cette semaine</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-title">Seuils de prix <span class="note">±7 / ±10 / ±15 %</span></div>
+    <div class="card">
+      <div class="row">
+        <div class="name"><div class="title">Amundi PEA S&amp;P 500 ETF</div><div class="meta">FR0011871128 · seuil ±7 %</div></div>
+        <div class="figure"><div class="price">57,23 €</div><div class="delta flat">réf. établie</div></div>
+      </div>
+      <div class="row">
+        <div class="name"><div class="title">Amundi MSCI World ETF</div><div class="meta">LU1681043599 · seuil ±7 %</div></div>
+        <div class="figure"><div class="price">680,22 €</div><div class="delta flat">réf. établie</div></div>
+      </div>
+      <div class="row">
+        <div class="name"><div class="title">Amundi Stoxx Europe Sel. Div.</div><div class="meta">LU1812092168 · seuil ±7 %</div></div>
+        <div class="figure"><div class="price">24,31 €</div><div class="delta flat">réf. établie</div></div>
+      </div>
+      <div class="row">
+        <div class="name"><div class="title">Danone</div><div class="meta">BN · seuil ±10 %</div></div>
+        <div class="figure"><div class="price">72,51 €</div><div class="delta flat">réf. établie</div></div>
+      </div>
+      <div class="row">
+        <div class="name"><div class="title">Sanofi</div><div class="meta">SAN · seuil ±10 %</div></div>
+        <div class="figure"><div class="price">79,60 €</div><div class="delta flat">réf. établie</div></div>
+      </div>
+      <div class="row">
+        <div class="name"><div class="title">Stellantis</div><div class="meta">STLAP · seuil ±10 %</div></div>
+        <div class="figure"><div class="price">5,07 €</div><div class="delta flat">réf. établie</div></div>
+      </div>
+      <div class="row">
+        <div class="name"><div class="title">Bitcoin</div><div class="meta">BTC · seuil ±15 %</div></div>
+        <div class="figure"><div class="price">$63 707</div><div class="delta down">-2,5 % (semaine)</div></div>
+      </div>
+      <div class="row">
+        <div class="name"><div class="title">Ethereum</div><div class="meta">ETH · seuil ±15 %</div></div>
+        <div class="figure"><div class="price">$1 891</div><div class="delta down">-3,2 % (semaine)</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Valeur tendance</div>
+    <div class="spotlight">
+      <div class="title">Amundi PEA Emergent (MSCI Emerging) ESG Transition UCITS ETF</div>
+      <div class="isin">FR0013412020</div>
+      <div class="desc">Réplique l'indice MSCI EM ex-Egypt ESG Broad CTB Select (marchés émergents, filtre ESG). Éligible PEA — cité comme option de diversification hors dépendance aux marchés US.</div>
+      <div class="facts">
+        <div class="f">Encours <b>827 M€</b></div>
+        <div class="f">Frais annuels <b>0,30 %</b></div>
+        <div class="f">Réplication <b>synthétique (swap)</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Actualité</div>
+    <div class="card">
+      <div class="news-group">
+        <div class="cat">Macro</div>
+        <p>BCE : réunion tenue les 22–23 juillet. Fed : réunion les 28–29 juillet, décision de taux attendue le 29/07 à 20h Paris — les marchés crypto reculent dans l'attente de l'annonce.</p>
+      </div>
+      <div class="news-group">
+        <div class="cat">Sectoriel</div>
+        <p>Danone publie ses résultats S1 2026 le 29/07. Sanofi et Stellantis publient leurs résultats T2 2026 le 30/07 — trois publications à moins d'une semaine d'écart.</p>
+      </div>
+      <div class="news-group">
+        <div class="cat">Crypto</div>
+        <p>BTC et ETH glissent cette semaine (resp. -2,5 % et -3,2 % depuis lundi), les investisseurs prudents avant la décision de la Fed. <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-tuesday-july-28-2026-crypto-prices-slide-ahead-of-fed-meeting-125210301.html" target="_blank" rel="noopener">Source</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Calendrier</div>
+    <div class="card timeline">
+      <div class="tl-item">
+        <div class="tl-date">28–29 juil.</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body"><div class="ev-title">Réunion Fed</div><div class="ev-meta">Décision de taux le 29/07, 20h Paris</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">29 juil.</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body"><div class="ev-title">Résultats S1 2026 — Danone</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">30 juil.</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body"><div class="ev-title">Résultats T2 2026 — Sanofi</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">30 juil.</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body"><div class="ev-title">Résultats T2 2026 — Stellantis</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">28 oct.</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body"><div class="ev-title">Résultats T3 2026 — Danone &amp; Stellantis</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">30 oct.</div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body"><div class="ev-title">Résultats T3 2026 — Sanofi</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Relevé strictement factuel — <strong>aucune recommandation</strong> de prix d'ordre, d'allocation ou d'achat/vente. La décision reste entièrement manuelle. Prochain relevé : dimanche 02.08, avec comparaison sur seuils.
+  </footer>
+
+</div>
