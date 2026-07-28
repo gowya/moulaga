@@ -22,10 +22,13 @@ Ne jamais calculer, suggérer ou recommander un prix d'ordre, une allocation, un
 5. Vérifier `eres_last_checked` dans `last-snapshot.json` — ne rechercher les valeurs ERES que si ≥28 jours se sont écoulés ; sinon garder les dernières valeurs affichées avec leur date
 6. Chercher l'actu des 7 derniers jours : macro (BCE/Fed, inflation), sectoriel (Sanofi, Danone, Stellantis, S&P 500/MSCI World), crypto
 7. Chercher le calendrier des prochaines échéances connues (résultats trimestriels, réunions BCE/Fed, publications CPI)
-8. Régénérer `index.html` en conservant le CSS et la structure existants — ne remplacer que le contenu des sections (bandeau date, stats, seuils, fonds ERES, valeur tendance, actualité, calendrier, footer)
-9. Écrire l'archive datée `veille/YYYY-MM-DD.md`
-10. Mettre à jour `last-snapshot.json` (prix relevés + `eres_last_checked`)
-11. Committer et pousser sur `main`, message `Veille hebdo YYYY-MM-DD`
+8. Pour Danone/Sanofi/Stellantis : rapporter les fondamentaux (P/E, croissance du CA, marges, consensus analystes attribué avec cible de prix) — jamais de note de synthèse (voir contrainte non négociable)
+9. Pour Danone/Sanofi/Stellantis + BTC/ETH : rapporter les métriques de risque (volatilité historique, bêta rapporté, max drawdown si trouvable) — jamais de note "faible/élevé"
+10. Pour Danone/Sanofi/Stellantis + BTC/ETH : rapporter les faits techniques (prix vs moyennes mobiles 50/200j, RSI/MACD avec seuils conventionnels cités comme définitions, niveaux de support/résistance) — jamais de signal Bullish/Bearish
+11. Régénérer `index.html` en conservant le CSS et la structure existants — ne remplacer que le contenu des sections (bandeau date, stats, seuils, fondamentaux, risque, technique/charts, fonds ERES, valeur tendance, actualité, calendrier, footer)
+12. Écrire l'archive datée `veille/YYYY-MM-DD.md`
+13. Mettre à jour `last-snapshot.json` (prix relevés + `eres_last_checked`)
+14. Committer et pousser sur `main`, message `Veille hebdo YYYY-MM-DD`
 
 ## Historique / décisions
 
