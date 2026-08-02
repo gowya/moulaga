@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-02",
+  "prices": {
+    "etf_amundi_sp500_FR0011871128": { "price_eur": 57.08, "label": "Amundi PEA S&P 500 ETF" },
+    "etf_amundi_msci_world_LU1681043599": { "price_eur": 675.91, "label": "Amundi MSCI World ETF" },
+    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 24.50, "label": "Amundi Stoxx Europe Select Dividend" },
+    "danone_BN": { "price_eur": 67.52, "label": "Danone" },
+    "sanofi_SAN": { "price_eur": 74.48, "label": "Sanofi" },
+    "stellantis_STLAP": { "price_eur": 4.74, "label": "Stellantis" },
+    "btc_eur": { "price_eur": 54779, "label": "Bitcoin" },
+    "eth_eur": { "price_eur": 1589.18, "label": "Ethereum" }
+  },
+  "eres": {
+    "last_checked": "2026-07-28",
+    "funds": {
+      "eres_selection_monetaire_QS0009118421_PERI": { "value_eur": 17936, "label": "ERES Sélection Monétaire P (PER-I Libre)" },
+      "eres_selection_monetaire_QS0009118421_PEI": { "value_eur": 9512, "label": "ERES Sélection Monétaire P (PEI)" },
+      "eres_selection_sp500_QS0009118918_PEI": { "value_eur": 5345, "label": "ERES Sélection S&P 500 P (PEI)" },
+      "eres_sycomore_europe_QS0009133891_PEI": { "value_eur": 1152, "label": "ERES Sycomore Europe Eco. (PEI)" }
+    }
+  },
+  "note": "Premier relevé formel de last-snapshot.json (fichier absent lors des exécutions précédentes). Variations vs 28.07.2026 calculées à partir des valeurs affichées sur index.html à cette date."
+}
