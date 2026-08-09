@@ -1,14 +1,14 @@
 {
-  "date": "2026-08-02",
+  "date": "2026-08-09",
   "prices": {
-    "etf_amundi_sp500_FR0011871128": { "price_eur": 57.08, "label": "Amundi PEA S&P 500 ETF" },
-    "etf_amundi_msci_world_LU1681043599": { "price_eur": 675.91, "label": "Amundi MSCI World ETF" },
-    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 24.50, "label": "Amundi Stoxx Europe Select Dividend" },
-    "danone_BN": { "price_eur": 67.52, "label": "Danone" },
-    "sanofi_SAN": { "price_eur": 74.48, "label": "Sanofi" },
-    "stellantis_STLAP": { "price_eur": 4.74, "label": "Stellantis" },
-    "btc_eur": { "price_eur": 54779, "label": "Bitcoin" },
-    "eth_eur": { "price_eur": 1589.18, "label": "Ethereum" }
+    "etf_amundi_sp500_FR0011871128": { "price_eur": 58.82, "label": "Amundi PEA S&P 500 ETF" },
+    "etf_amundi_msci_world_LU1681043599": { "price_eur": 699.77, "label": "Amundi MSCI World ETF" },
+    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 24.34, "label": "Amundi Stoxx Europe Select Dividend" },
+    "danone_BN": { "price_eur": 68.56, "label": "Danone" },
+    "sanofi_SAN": { "price_eur": 74.75, "label": "Sanofi" },
+    "stellantis_STLAP": { "price_eur": 4.84, "label": "Stellantis" },
+    "btc_eur": { "price_eur": 56200, "label": "Bitcoin" },
+    "eth_eur": { "price_eur": 1661, "label": "Ethereum" }
   },
   "eres": {
     "last_checked": "2026-07-28",
@@ -19,5 +19,5 @@
       "eres_sycomore_europe_QS0009133891_PEI": { "value_eur": 1152, "label": "ERES Sycomore Europe Eco. (PEI)" }
     }
   },
-  "note": "Premier relevé formel de last-snapshot.json (fichier absent lors des exécutions précédentes). Variations vs 28.07.2026 calculées à partir des valeurs affichées sur index.html à cette date."
+  "note": "Relevé du 09.08.2026 : accès direct (WebFetch) aux sites financiers bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées avec divergences entre sources (notamment Sanofi et Stellantis, voir veille/2026-08-09.md). Amundi Stoxx Europe Select Dividend basé sur une donnée datée du 29.07 faute de valeur plus récente trouvée."
 }
