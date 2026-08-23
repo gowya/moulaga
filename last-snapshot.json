@@ -1,14 +1,14 @@
 {
-  "date": "2026-08-16",
+  "date": "2026-08-23",
   "prices": {
-    "etf_amundi_sp500_FR0011871128": { "price_eur": 59.00, "label": "Amundi PEA S&P 500 ETF" },
-    "etf_amundi_msci_world_LU1681043599": { "price_eur": 700.98, "label": "Amundi MSCI World ETF" },
-    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 25.32, "label": "Amundi Stoxx Europe Select Dividend" },
-    "danone_BN": { "price_eur": 67.24, "label": "Danone" },
-    "sanofi_SAN": { "price_eur": 76.14, "label": "Sanofi" },
-    "stellantis_STLAP": { "price_eur": 4.6725, "label": "Stellantis" },
-    "btc_eur": { "price_eur": 54397, "label": "Bitcoin" },
-    "eth_eur": { "price_eur": 1623.96, "label": "Ethereum" }
+    "etf_amundi_sp500_FR0011871128": { "price_eur": 57.70, "label": "Amundi PEA S&P 500 ETF" },
+    "etf_amundi_msci_world_LU1681043599": { "price_eur": 688.01, "label": "Amundi MSCI World ETF" },
+    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 24.50, "label": "Amundi Stoxx Europe Select Dividend" },
+    "danone_BN": { "price_eur": 66.32, "label": "Danone" },
+    "sanofi_SAN": { "price_eur": 78.94, "label": "Sanofi" },
+    "stellantis_STLAP": { "price_eur": 4.6070, "label": "Stellantis" },
+    "btc_eur": { "price_eur": 66260, "label": "Bitcoin" },
+    "eth_eur": { "price_eur": 2066, "label": "Ethereum" }
   },
   "eres": {
     "last_checked": "2026-07-28",
@@ -19,5 +19,5 @@
       "eres_sycomore_europe_QS0009133891_PEI": { "value_eur": 1152, "label": "ERES Sycomore Europe Eco. (PEI)" }
     }
   },
-  "note": "Relevé du 16.08.2026 : accès direct (WebFetch) aux sites financiers de nouveau bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées avec divergences entre sources (notamment Danone et BTC/ETH CoinGecko vs Kraken, voir veille/2026-08-16.md). ERES non revérifié (19 jours écoulés depuis le 28.07, < 28 jours) — valeurs inchangées."
+  "note": "Relevé du 23.08.2026 : accès direct (WebFetch) aux sites financiers de nouveau bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées avec divergences entre sources (voir veille/2026-08-23.md). Deux seuils franchis cette semaine : BTC +21,8 % et ETH +27,2 % (seuil ±15 % chacun), forte semaine haussière crypto généralisée. ERES non revérifié (26 jours écoulés depuis le 28.07, < 28 jours) — valeurs inchangées, prochaine vérification prévue le 30.08 (33 jours écoulés)."
 }
