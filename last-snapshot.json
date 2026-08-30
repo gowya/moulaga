@@ -1,14 +1,14 @@
 {
-  "date": "2026-08-23",
+  "date": "2026-08-30",
   "prices": {
-    "etf_amundi_sp500_FR0011871128": { "price_eur": 57.70, "label": "Amundi PEA S&P 500 ETF" },
-    "etf_amundi_msci_world_LU1681043599": { "price_eur": 688.01, "label": "Amundi MSCI World ETF" },
-    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 24.50, "label": "Amundi Stoxx Europe Select Dividend" },
-    "danone_BN": { "price_eur": 66.32, "label": "Danone" },
-    "sanofi_SAN": { "price_eur": 78.94, "label": "Sanofi" },
-    "stellantis_STLAP": { "price_eur": 4.6070, "label": "Stellantis" },
-    "btc_eur": { "price_eur": 66260, "label": "Bitcoin" },
-    "eth_eur": { "price_eur": 2066, "label": "Ethereum" }
+    "etf_amundi_sp500_FR0011871128": { "price_eur": 58.08, "label": "Amundi PEA S&P 500 ETF" },
+    "etf_amundi_msci_world_LU1681043599": { "price_eur": 700.40, "label": "Amundi MSCI World ETF" },
+    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 25.32, "label": "Amundi Stoxx Europe Select Dividend" },
+    "danone_BN": { "price_eur": 66.18, "label": "Danone" },
+    "sanofi_SAN": { "price_eur": 78.74, "label": "Sanofi" },
+    "stellantis_STLAP": { "price_eur": 4.6490, "label": "Stellantis" },
+    "btc_eur": { "price_eur": 68424.58, "label": "Bitcoin" },
+    "eth_eur": { "price_eur": 2165.38, "label": "Ethereum" }
   },
   "eres": {
     "last_checked": "2026-07-28",
@@ -19,5 +19,5 @@
       "eres_sycomore_europe_QS0009133891_PEI": { "value_eur": 1152, "label": "ERES Sycomore Europe Eco. (PEI)" }
     }
   },
-  "note": "Relevé du 23.08.2026 : accès direct (WebFetch) aux sites financiers de nouveau bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées avec divergences entre sources (voir veille/2026-08-23.md). Deux seuils franchis cette semaine : BTC +21,8 % et ETH +27,2 % (seuil ±15 % chacun), forte semaine haussière crypto généralisée. ERES non revérifié (26 jours écoulés depuis le 28.07, < 28 jours) — valeurs inchangées, prochaine vérification prévue le 30.08 (33 jours écoulés)."
+  "note": "Relevé du 30.08.2026 : accès direct (WebFetch) aux sites financiers toujours bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées avec divergences entre sources (voir veille/2026-08-30.md). Aucun seuil franchi cette semaine (mouvement le plus marqué : ETH +4,8 %, sous le seuil ±15 %). Deux extraits de prix jugés incohérents écartés (Stoxx Europe Sel. Div. 22,16 €, Stellantis 6,11-6,43 €). ERES : recherche tentée (33 jours écoulés depuis le 28.07, ≥28 jours) mais aucune valeur liquidative d'août 2026 fiable trouvée publiquement pour les 3 fonds (données trop anciennes ou contradictoires selon le fonds) — eres_last_checked non mis à jour, valeurs du 28.07 conservées, nouvelle tentative prévue le 06.09."
 }
