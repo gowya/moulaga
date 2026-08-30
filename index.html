@@ -1,5 +1,7 @@
+<meta charset="utf-8">
 <title>Veille finance perso — semaine du 23 août 2026</title>
 <meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
     --bg: #f1efe9;
@@ -223,25 +225,31 @@
 
   .row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    flex-direction: column;
+    gap: 5px;
     padding: 11px 14px;
   }
   .row + .row { border-top: 1px solid var(--border); }
+
+  .row-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
 
   .row .name {
     display: flex;
     flex-direction: column;
     gap: 2px;
     min-width: 0;
+    flex: 1 1 auto;
   }
   .row .name .title {
     font-size: 0.88rem;
     font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow-wrap: break-word;
   }
   .row .name .meta {
     font-size: 0.72rem;
@@ -255,21 +263,46 @@
     align-items: flex-end;
     gap: 2px;
     flex-shrink: 0;
+    text-align: right;
   }
   .row .figure .price {
     font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
     font-variant-numeric: tabular-nums;
     font-size: 0.92rem;
     font-weight: 600;
+    white-space: nowrap;
   }
   .row .figure .delta {
     font-size: 0.72rem;
     font-variant-numeric: tabular-nums;
     font-weight: 600;
+    white-space: nowrap;
   }
   .delta.up { color: var(--up); }
   .delta.down { color: var(--down); }
   .delta.flat { color: var(--muted); font-weight: 500; }
+
+  /* Full-width note line below a row's main price line — keeps long source/
+     methodology caveats from forcing the figure column to overflow the card. */
+  .row-note {
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.45;
+    overflow-wrap: break-word;
+  }
+  .row-note .flag {
+    display: inline-block;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--down);
+    border: 1px solid var(--down);
+    border-radius: 6px;
+    padding: 1px 6px;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
 
   .spotlight {
     background: var(--surface);
@@ -425,36 +458,60 @@
     <div class="section-title">Seuils de prix <span class="note">±7 / ±10 / ±15 %</span></div>
     <div class="card">
       <div class="row">
-        <div class="name"><div class="title">Amundi PEA S&amp;P 500 ETF</div><div class="meta">FR0011871128 · seuil ±7 %</div></div>
-        <div class="figure"><div class="price">57,70 €</div><div class="delta down">-2,2 % vs 16.08 (fourchette de sources 57,08–57,76 €)</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">Amundi PEA S&amp;P 500 ETF</div><div class="meta">FR0011871128 · seuil ±7 %</div></div>
+          <div class="figure"><div class="price">57,70 €</div><div class="delta down">-2,2 %</div></div>
+        </div>
+        <div class="row-note">vs 16.08 · fourchette de sources 57,08–57,76 €</div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">Amundi MSCI World ETF</div><div class="meta">LU1681043599 · seuil ±7 %</div></div>
-        <div class="figure"><div class="price">688,01 €</div><div class="delta down">-1,9 % vs 16.08 (daté du 21.08)</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">Amundi MSCI World ETF</div><div class="meta">LU1681043599 · seuil ±7 %</div></div>
+          <div class="figure"><div class="price">688,01 €</div><div class="delta down">-1,9 %</div></div>
+        </div>
+        <div class="row-note">vs 16.08 · daté du 21.08</div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">Amundi Stoxx Europe Sel. Div.</div><div class="meta">LU1812092168 · seuil ±7 %</div></div>
-        <div class="figure"><div class="price">24,50 €</div><div class="delta down">-3,2 % vs 16.08 (cotation différée 15 min, date non précisée)</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">Amundi Stoxx Europe Sel. Div.</div><div class="meta">LU1812092168 · seuil ±7 %</div></div>
+          <div class="figure"><div class="price">24,50 €</div><div class="delta down">-3,2 %</div></div>
+        </div>
+        <div class="row-note">vs 16.08 · cotation différée 15 min, date non précisée</div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">Danone</div><div class="meta">BN · seuil ±10 %</div></div>
-        <div class="figure"><div class="price">66,32 €</div><div class="delta down">-1,4 % vs 16.08 (clôture du 21.08 ; un extrait non daté à 67,52 € écarté)</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">Danone</div><div class="meta">BN · seuil ±10 %</div></div>
+          <div class="figure"><div class="price">66,32 €</div><div class="delta down">-1,4 %</div></div>
+        </div>
+        <div class="row-note">vs 16.08 · clôture du 21.08 ; un extrait non daté à 67,52 € écarté</div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">Sanofi</div><div class="meta">SAN · seuil ±10 %</div></div>
-        <div class="figure"><div class="price">78,94 €</div><div class="delta up">+3,7 % vs 16.08 (clôture du 21.08 ; un extrait non daté à 82,58 € incohérent écarté)</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">Sanofi</div><div class="meta">SAN · seuil ±10 %</div></div>
+          <div class="figure"><div class="price">78,94 €</div><div class="delta up">+3,7 %</div></div>
+        </div>
+        <div class="row-note">vs 16.08 · clôture du 21.08 ; un extrait non daté à 82,58 € incohérent écarté</div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">Stellantis</div><div class="meta">STLAP · seuil ±10 %</div></div>
-        <div class="figure"><div class="price">4,6070 €</div><div class="delta down">-1,4 % vs 16.08 (clôture du 21.08 ; un extrait non daté à 4,671 € au sens contradictoire écarté)</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">Stellantis</div><div class="meta">STLAP · seuil ±10 %</div></div>
+          <div class="figure"><div class="price">4,6070 €</div><div class="delta down">-1,4 %</div></div>
+        </div>
+        <div class="row-note">vs 16.08 · clôture du 21.08 ; un extrait non daté à 4,671 € au sens contradictoire écarté</div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">Bitcoin</div><div class="meta">BTC/EUR · seuil ±15 %</div></div>
-        <div class="figure"><div class="price">66 260 €</div><div class="delta up">+21,8 % vs 16.08 — SEUIL FRANCHI (CoinMarketCap ; convergent CoinGecko 65 906 €, Kraken 66 275 €)</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">Bitcoin</div><div class="meta">BTC/EUR · seuil ±15 %</div></div>
+          <div class="figure"><div class="price">66 260 €</div><div class="delta up">+21,8 %</div></div>
+        </div>
+        <div class="row-note"><span class="flag">Seuil franchi</span>vs 16.08 · CoinMarketCap ; convergent CoinGecko 65 906 €, Kraken 66 275 €</div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">Ethereum</div><div class="meta">ETH/EUR · seuil ±15 %</div></div>
-        <div class="figure"><div class="price">2 066 €</div><div class="delta up">+27,2 % vs 16.08 — SEUIL FRANCHI (CoinGecko/CoinMarketCap)</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">Ethereum</div><div class="meta">ETH/EUR · seuil ±15 %</div></div>
+          <div class="figure"><div class="price">2 066 €</div><div class="delta up">+27,2 %</div></div>
+        </div>
+        <div class="row-note"><span class="flag">Seuil franchi</span>vs 16.08 · CoinGecko/CoinMarketCap</div>
       </div>
     </div>
   </section>
@@ -463,20 +520,28 @@
     <div class="section-title">Fonds ERES (PERCO / PEI) <span class="note">vérif. mensuelle</span></div>
     <div class="card">
       <div class="row">
-        <div class="name"><div class="title">ERES Sélection Monétaire P</div><div class="meta">PER-I Libre · QS0009118421</div></div>
-        <div class="figure"><div class="price">17 936 €</div><div class="delta flat">dern. relevé 28.07</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">ERES Sélection Monétaire P</div><div class="meta">PER-I Libre · QS0009118421</div></div>
+          <div class="figure"><div class="price">17 936 €</div><div class="delta flat">dern. relevé 28.07</div></div>
+        </div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">ERES Sélection Monétaire P</div><div class="meta">PEI · QS0009118421</div></div>
-        <div class="figure"><div class="price">9 512 €</div><div class="delta flat">dern. relevé 28.07</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">ERES Sélection Monétaire P</div><div class="meta">PEI · QS0009118421</div></div>
+          <div class="figure"><div class="price">9 512 €</div><div class="delta flat">dern. relevé 28.07</div></div>
+        </div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">ERES Sélection S&amp;P 500 P</div><div class="meta">PEI · QS0009118918</div></div>
-        <div class="figure"><div class="price">5 345 €</div><div class="delta flat">dern. relevé 28.07</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">ERES Sélection S&amp;P 500 P</div><div class="meta">PEI · QS0009118918</div></div>
+          <div class="figure"><div class="price">5 345 €</div><div class="delta flat">dern. relevé 28.07</div></div>
+        </div>
       </div>
       <div class="row">
-        <div class="name"><div class="title">ERES Sycomore Europe Eco.</div><div class="meta">PEI · QS0009133891</div></div>
-        <div class="figure"><div class="price">1 152 €</div><div class="delta flat">dern. relevé 28.07</div></div>
+        <div class="row-main">
+          <div class="name"><div class="title">ERES Sycomore Europe Eco.</div><div class="meta">PEI · QS0009133891</div></div>
+          <div class="figure"><div class="price">1 152 €</div><div class="delta flat">dern. relevé 28.07</div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -636,3 +701,26 @@
   </footer>
 
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+  (function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (typeof gsap === 'undefined' || reduceMotion) return;
+
+    var groups = [
+      document.querySelector('header.top'),
+      document.querySelectorAll('.stats .stat'),
+      document.querySelectorAll('.columns > section'),
+      document.querySelector('footer')
+    ];
+
+    gsap.set(groups, { opacity: 0, y: 12 });
+
+    var tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'power2.out' } });
+    tl.to(groups[0], { opacity: 1, y: 0 })
+      .to(groups[1], { opacity: 1, y: 0, stagger: 0.06 }, '-=0.25')
+      .to(groups[2], { opacity: 1, y: 0, stagger: 0.07 }, '-=0.2')
+      .to(groups[3], { opacity: 1, y: 0 }, '-=0.2');
+  })();
+</script>
