@@ -1,14 +1,14 @@
 {
-  "date": "2026-08-30",
+  "date": "2026-09-06",
   "prices": {
-    "etf_amundi_sp500_FR0011871128": { "price_eur": 58.08, "label": "Amundi PEA S&P 500 ETF" },
-    "etf_amundi_msci_world_LU1681043599": { "price_eur": 700.40, "label": "Amundi MSCI World ETF" },
+    "etf_amundi_sp500_FR0011871128": { "price_eur": 58.63, "label": "Amundi PEA S&P 500 ETF" },
+    "etf_amundi_msci_world_LU1681043599": { "price_eur": 693.06, "label": "Amundi MSCI World ETF" },
     "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 25.32, "label": "Amundi Stoxx Europe Select Dividend" },
-    "danone_BN": { "price_eur": 66.18, "label": "Danone" },
-    "sanofi_SAN": { "price_eur": 78.74, "label": "Sanofi" },
-    "stellantis_STLAP": { "price_eur": 4.6490, "label": "Stellantis" },
-    "btc_eur": { "price_eur": 68424.58, "label": "Bitcoin" },
-    "eth_eur": { "price_eur": 2165.38, "label": "Ethereum" }
+    "danone_BN": { "price_eur": 63.72, "label": "Danone" },
+    "sanofi_SAN": { "price_eur": 76.16, "label": "Sanofi" },
+    "stellantis_STLAP": { "price_eur": 4.78, "label": "Stellantis" },
+    "btc_eur": { "price_eur": 68821, "label": "Bitcoin" },
+    "eth_eur": { "price_eur": 2152.63, "label": "Ethereum" }
   },
   "eres": {
     "last_checked": "2026-07-28",
@@ -19,5 +19,5 @@
       "eres_sycomore_europe_QS0009133891_PEI": { "value_eur": 1152, "label": "ERES Sycomore Europe Eco. (PEI)" }
     }
   },
-  "note": "Relevé du 30.08.2026 : accès direct (WebFetch) aux sites financiers toujours bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées avec divergences entre sources (voir veille/2026-08-30.md). Aucun seuil franchi cette semaine (mouvement le plus marqué : ETH +4,8 %, sous le seuil ±15 %). Deux extraits de prix jugés incohérents écartés (Stoxx Europe Sel. Div. 22,16 €, Stellantis 6,11-6,43 €). ERES : recherche tentée (33 jours écoulés depuis le 28.07, ≥28 jours) mais aucune valeur liquidative d'août 2026 fiable trouvée publiquement pour les 3 fonds (données trop anciennes ou contradictoires selon le fonds) — eres_last_checked non mis à jour, valeurs du 28.07 conservées, nouvelle tentative prévue le 06.09."
+  "note": "Relevé du 06.09.2026 : accès direct (WebFetch) aux sites financiers toujours bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées (marchés actions/ETF fermés le week-end, clôtures du 04.09 utilisées ; crypto en continu). Aucun seuil franchi cette semaine (mouvement le plus marqué : Danone -3,7 %, sous le seuil ±10 %). Un extrait de prix jugé incohérent écarté (Stellantis 5,022 €, probable confusion avec STLA New York en USD). Amundi Stoxx Europe Sel. Div. non rafraîchi cette semaine (aucune cotation de septembre trouvée), valeur du 30.08 reportée à l'identique. ERES : troisième recherche consécutive tentée (≈40 jours écoulés depuis le 28.07, ≥28 jours) mais toujours aucune valeur liquidative fiable de fin août/septembre 2026 trouvée pour les 3 fonds (données trouvées trop anciennes ou d'ordre de grandeur incompatible) — eres_last_checked non mis à jour, valeurs du 28.07 conservées, nouvelle tentative prévue le 13.09.2026. Fait notable identifié cette semaine : une note interprofessionnelle du 24.07.2026 (AFG/AMAFI/FBF/France Post-Marché) rapporte qu'un projet de budget 2027 pourrait retirer l'éligibilité PEA aux ETF synthétiques exposés hors Europe, ce qui pourrait concerner les ETF Amundi PEA S&P 500 et Amundi MSCI World suivis ici — mesure encore à l'état de projet, à surveiller lors des prochains relevés."
 }
