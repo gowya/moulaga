@@ -1,14 +1,14 @@
 {
-  "date": "2026-09-13",
+  "date": "2026-09-20",
   "prices": {
-    "etf_amundi_sp500_FR0011871128": { "price_eur": 57.86, "label": "Amundi PEA S&P 500 ETF" },
-    "etf_amundi_msci_world_LU1681043599": { "price_eur": 694.60, "label": "Amundi MSCI World ETF" },
-    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 25.32, "label": "Amundi Stoxx Europe Select Dividend" },
-    "danone_BN": { "price_eur": 66.46, "label": "Danone" },
-    "sanofi_SAN": { "price_eur": 73.70, "label": "Sanofi" },
-    "stellantis_STLAP": { "price_eur": 4.5645, "label": "Stellantis" },
-    "btc_eur": { "price_eur": 67087, "label": "Bitcoin" },
-    "eth_eur": { "price_eur": 2152.48, "label": "Ethereum" }
+    "etf_amundi_sp500_FR0011871128": { "price_eur": 57.89, "label": "Amundi PEA S&P 500 ETF" },
+    "etf_amundi_msci_world_LU1681043599": { "price_eur": 691.68, "label": "Amundi MSCI World ETF" },
+    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 25.51, "label": "Amundi Stoxx Europe Select Dividend" },
+    "danone_BN": { "price_eur": 60.54, "label": "Danone" },
+    "sanofi_SAN": { "price_eur": 74.05, "label": "Sanofi" },
+    "stellantis_STLAP": { "price_eur": 4.1985, "label": "Stellantis" },
+    "btc_eur": { "price_eur": 69740, "label": "Bitcoin" },
+    "eth_eur": { "price_eur": 2243, "label": "Ethereum" }
   },
   "eres": {
     "last_checked": "2026-07-28",
@@ -19,5 +19,5 @@
       "eres_sycomore_europe_QS0009133891_PEI": { "value_eur": 1152, "label": "ERES Sycomore Europe Eco. (PEI)" }
     }
   },
-  "note": "Relevé du 13.09.2026 : accès direct (WebFetch) aux sites financiers toujours bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées (clôtures du 11.09 pour actions/ETF, crypto en continu ~13.09). Aucun seuil franchi cette semaine (mouvement le plus marqué : Danone +4,3 %, sous le seuil ±10 %). Plusieurs extraits de prix écartés car incohérents : Stellantis 4,841 € et 5,654 € (la valeur retenue 4,5645 € a été confirmée par deux recherches indépendantes sur la même source Boursorama) ; Ethereum 1 383,68 € (CoinGecko, probable erreur d'extraction) ; Amundi Stoxx Europe Sel. Div. 23,40 € (cotation Xetra, place différente de la cotation Paris suivie, non utilisée) — cet ETF reste non rafraîchi depuis fin août, valeur du 06.09 reportée à l'identique. ERES : quatrième recherche consécutive tentée (47 jours écoulés depuis le 28.07, largement ≥28 jours) mais toujours aucune valeur liquidative fiable de fin août/septembre 2026 trouvée pour les 3 fonds (données trouvées trop anciennes : 28.01.2026 et 08.10.2025) — eres_last_checked non mis à jour, valeurs du 28.07 conservées, nouvelle tentative prévue le 20.09.2026. Fait notable identifié cette semaine : le ministre David Amiel a annoncé le 26.07.2026 que le gouvernement ne proposerait pas dans le PLF 2027 de mesure retirant l'éligibilité PEA aux ETF synthétiques exposés hors Europe (sujet suivi depuis le relevé du 06.09) — sous réserve de confirmation lors de la présentation du PLF 2027 en Conseil des ministres le 30.09.2026 et de la navette parlementaire qui suivra."
+  "note": "Relevé du 20.09.2026 : accès direct (WebFetch) aux sites financiers toujours bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées (clôtures du 18.09 pour actions/ETF, crypto en continu ~20.09). Aucun seuil franchi cette semaine — mouvements les plus marqués : Danone -8,9 % et Stellantis -8,0 %, tous deux sous leur seuil ±10 % (Stellantis concomitant à deux dégradations d'analystes, Berenberg et Morgan Stanley). ERES : cinquième recherche consécutive tentée (54 jours écoulés depuis le 28.07, largement ≥28 jours) mais toujours aucune valeur liquidative fiable et récente trouvée pour les 3 fonds — une VL par part datée du 08.07.2026 a été trouvée pour ERES Sélection S&P 500 P mais sans effectif d'unités connu pour la convertir en valeur de position, donc non exploitable ; eres_last_checked non mis à jour, valeurs du 28.07 conservées, nouvelle tentative prévue au prochain relevé (27.09.2026). Fait notable identifié cette semaine : le dépôt du PLF 2027 à l'Assemblée nationale est annoncé pour le 30.09.2026 — échéance à surveiller pour confirmer (ou non) la position annoncée le 26.07.2026 par le ministre David Amiel de ne pas retirer l'éligibilité PEA aux ETF synthétiques exposés hors Europe. Autre fait notable : le FOMC (Fed) a relevé ses taux de 0,25 point à 3,75-4,00 % le 16.09.2026 (source officielle federalreserve.gov), la BCE ayant également relevé ses taux le 10.09 — contexte macro de hausses de taux concomitantes des deux côtés de l'Atlantique cette semaine."
 }
