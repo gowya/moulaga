@@ -1,14 +1,14 @@
 {
-  "date": "2026-09-20",
+  "date": "2026-09-27",
   "prices": {
-    "etf_amundi_sp500_FR0011871128": { "price_eur": 57.89, "label": "Amundi PEA S&P 500 ETF" },
-    "etf_amundi_msci_world_LU1681043599": { "price_eur": 691.68, "label": "Amundi MSCI World ETF" },
-    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 25.51, "label": "Amundi Stoxx Europe Select Dividend" },
-    "danone_BN": { "price_eur": 60.54, "label": "Danone" },
-    "sanofi_SAN": { "price_eur": 74.05, "label": "Sanofi" },
-    "stellantis_STLAP": { "price_eur": 4.1985, "label": "Stellantis" },
-    "btc_eur": { "price_eur": 69740, "label": "Bitcoin" },
-    "eth_eur": { "price_eur": 2243, "label": "Ethereum" }
+    "etf_amundi_sp500_FR0011871128": { "price_eur": 59.58, "label": "Amundi PEA S&P 500 ETF" },
+    "etf_amundi_msci_world_LU1681043599": { "price_eur": 702.27, "label": "Amundi MSCI World ETF" },
+    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 24.82, "label": "Amundi Stoxx Europe Select Dividend" },
+    "danone_BN": { "price_eur": 59.56, "label": "Danone" },
+    "sanofi_SAN": { "price_eur": 72.56, "label": "Sanofi" },
+    "stellantis_STLAP": { "price_eur": 4.174, "label": "Stellantis" },
+    "btc_eur": { "price_eur": 74389, "label": "Bitcoin" },
+    "eth_eur": { "price_eur": 2360, "label": "Ethereum" }
   },
   "eres": {
     "last_checked": "2026-07-28",
@@ -19,5 +19,5 @@
       "eres_sycomore_europe_QS0009133891_PEI": { "value_eur": 1152, "label": "ERES Sycomore Europe Eco. (PEI)" }
     }
   },
-  "note": "Relevé du 20.09.2026 : accès direct (WebFetch) aux sites financiers toujours bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées (clôtures du 18.09 pour actions/ETF, crypto en continu ~20.09). Aucun seuil franchi cette semaine — mouvements les plus marqués : Danone -8,9 % et Stellantis -8,0 %, tous deux sous leur seuil ±10 % (Stellantis concomitant à deux dégradations d'analystes, Berenberg et Morgan Stanley). ERES : cinquième recherche consécutive tentée (54 jours écoulés depuis le 28.07, largement ≥28 jours) mais toujours aucune valeur liquidative fiable et récente trouvée pour les 3 fonds — une VL par part datée du 08.07.2026 a été trouvée pour ERES Sélection S&P 500 P mais sans effectif d'unités connu pour la convertir en valeur de position, donc non exploitable ; eres_last_checked non mis à jour, valeurs du 28.07 conservées, nouvelle tentative prévue au prochain relevé (27.09.2026). Fait notable identifié cette semaine : le dépôt du PLF 2027 à l'Assemblée nationale est annoncé pour le 30.09.2026 — échéance à surveiller pour confirmer (ou non) la position annoncée le 26.07.2026 par le ministre David Amiel de ne pas retirer l'éligibilité PEA aux ETF synthétiques exposés hors Europe. Autre fait notable : le FOMC (Fed) a relevé ses taux de 0,25 point à 3,75-4,00 % le 16.09.2026 (source officielle federalreserve.gov), la BCE ayant également relevé ses taux le 10.09 — contexte macro de hausses de taux concomitantes des deux côtés de l'Atlantique cette semaine."
+  "note": "Relevé du 27.09.2026 : accès direct (WebFetch) aux sites financiers toujours bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées (clôtures du 25.09 pour la plupart des actions/ETF, dernière cotation fiable recoupée du 22.09 pour Stellantis, crypto en continu ~27.09). Aucun seuil franchi cette semaine — mouvements les plus marqués : BTC +6,7 % et ETH +5,2 %, tous deux sous leur seuil ±15 %. Divergences de prix inhabituellement fortes cette semaine sur Sanofi (extrait isolé à 76,96 € écarté, retenu ~72,56 € recoupé par deux sources indépendantes) et Stellantis (extraits allant de 4,00 € à 7,99 € selon la capture — la fourchette basse ~4,17 € retenue après recoupement avec le range 52 semaines confirmé par plusieurs sources et une analyse technique Boursorama plaçant le titre sous sa MM50 à 4,76 €). ERES : sixième recherche consécutive tentée (61 jours écoulés depuis le 28.07, largement ≥28 jours) mais toujours aucune VL fiable et récente trouvée pour les 3 fonds — cette semaine, cause identifiée : l'ensemble des sources pertinentes (zonebourse, sicavonline, quantalys, eres-group) étaient bloquées par le proxy réseau, limitant la recherche à des extraits web peu fiables ; eres_last_checked non mis à jour, valeurs du 28.07 conservées, nouvelle tentative prévue au prochain relevé (04.10.2026). Fait notable identifié cette semaine : le dossier PLF 2027/éligibilité PEA des ETF synthétiques exposés hors Europe est clos côté annonce gouvernementale — le gouvernement a confirmé le 26.08.2026 (réitéré le 01.09.2026) qu'il ne retirera pas cette éligibilité (84 % des PEA suivis par Finary contiennent au moins un ETF synthétique) ; dépôt du PLF 2027 toujours prévu le 30.09.2026 (date limite légale LOLF : 06.10.2026)."
 }
