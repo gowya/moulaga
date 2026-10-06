@@ -23,15 +23,17 @@ Ne jamais calculer, suggérer ou recommander un prix d'ordre, une allocation, un
 6. Chercher l'actu des 7 derniers jours : macro (BCE/Fed, inflation), sectoriel (Sanofi, Danone, Stellantis, S&P 500/MSCI World), crypto
 7. Chercher le calendrier des prochaines échéances connues (résultats trimestriels, réunions BCE/Fed, publications CPI)
 8. Pour Danone/Sanofi/Stellantis : rapporter les fondamentaux (P/E, croissance du CA, marges, consensus analystes attribué avec cible de prix) — jamais de note de synthèse (voir contrainte non négociable)
+8bis. Pour les 3 ETF larges PEA (Amundi S&P 500, Amundi MSCI World, Amundi Stoxx Europe Select Dividend) : rapporter les métriques propres aux ETF — TER (frais annuels), P/E moyen pondéré de l'indice sous-jacent répliqué, écart de suivi (tracking difference) vs l'indice — toujours attribué à la source ; si une donnée ne bouge pas semaine après semaine (TER notamment), elle peut être reconduite sans nouvelle recherche tant que la source reste valide. Jamais de note de synthèse ni de comparaison "meilleur ETF".
 9. Pour Danone/Sanofi/Stellantis + BTC/ETH : rapporter les métriques de risque (volatilité historique, bêta rapporté, max drawdown si trouvable) — jamais de note "faible/élevé"
 10. Pour Danone/Sanofi/Stellantis + BTC/ETH : rapporter les faits techniques (prix vs moyennes mobiles 50/200j, RSI/MACD avec seuils conventionnels cités comme définitions, niveaux de support/résistance) — jamais de signal Bullish/Bearish
-11. Régénérer `index.html` en conservant le CSS et la structure existants — ne remplacer que le contenu des sections (bandeau date, stats, seuils, fondamentaux, risque, technique/charts, fonds ERES, valeur tendance, actualité, calendrier, footer)
+11. Régénérer `index.html` en conservant le CSS et la structure existants — ne remplacer que le contenu des sections (bandeau date, stats, seuils, fondamentaux actions, fondamentaux ETF, risque, technique/charts, fonds ERES, valeur tendance, actualité, calendrier, footer)
 12. Écrire l'archive datée `veille/YYYY-MM-DD.md`
 13. Mettre à jour `last-snapshot.json` (prix relevés + `eres_last_checked`)
 14. Committer et pousser sur `main`, message `Veille hebdo YYYY-MM-DD`
 
 ## Historique / décisions
 
+- **06.10.2026** — Ajout d'une sous-section "Fondamentaux ETF" (étape 8bis) suite à une question de l'utilisatrice : les 3 ETF larges PEA n'avaient jusqu'ici que leur prix/seuil (section Seuils), aucune métrique propre type ETF (TER, P/E de l'indice sous-jacent, tracking difference) — absence volontaire au départ car le P/E/CA/marges/consensus analystes de l'étape 8 ne s'appliquent qu'à des actions individuelles, mais rien n'empêchait d'ajouter les métriques pertinentes pour un ETF. Section ajoutée dans `index.html` (sous Fondamentaux) et dans l'étape 11.
 - **28.07.2026** — Repo rendu public : contournement d'un problème d'accès de l'app GitHub pour les routines cloud (aucune installation trouvée donnant accès aux repos privés sur ce compte à l'époque). À repasser en privé si le problème est résolu côté Anthropic — attention, Pages nécessite alors un forfait GitHub payant sur repo privé.
 - **28.07.2026** — `robots.txt` + balise `noindex` ajoutés pour limiter l'indexation par les moteurs de recherche malgré la visibilité publique.
 - **28.07.2026** — Le tout premier commit avait été fait par erreur avec l'identité git réelle de l'utilisatrice (nom + email personnel) ; les commits suivants utilisent une identité générique (`gowya`). Le premier commit n'a pas été réécrit par défaut (ça demanderait un force-push volontaire).
