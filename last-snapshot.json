@@ -1,14 +1,14 @@
 {
-  "date": "2026-09-27",
+  "date": "2026-10-04",
   "prices": {
-    "etf_amundi_sp500_FR0011871128": { "price_eur": 59.58, "label": "Amundi PEA S&P 500 ETF" },
-    "etf_amundi_msci_world_LU1681043599": { "price_eur": 702.27, "label": "Amundi MSCI World ETF" },
-    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 24.82, "label": "Amundi Stoxx Europe Select Dividend" },
-    "danone_BN": { "price_eur": 59.56, "label": "Danone" },
-    "sanofi_SAN": { "price_eur": 72.56, "label": "Sanofi" },
-    "stellantis_STLAP": { "price_eur": 4.174, "label": "Stellantis" },
-    "btc_eur": { "price_eur": 74389, "label": "Bitcoin" },
-    "eth_eur": { "price_eur": 2360, "label": "Ethereum" }
+    "etf_amundi_sp500_FR0011871128": { "price_eur": 60.26, "label": "Amundi PEA S&P 500 ETF" },
+    "etf_amundi_msci_world_LU1681043599": { "price_eur": 706.96, "label": "Amundi MSCI World ETF" },
+    "etf_amundi_stoxx_eu_seldiv_LU1812092168": { "price_eur": 24.165, "label": "Amundi Stoxx Europe Select Dividend" },
+    "danone_BN": { "price_eur": 59.12, "label": "Danone" },
+    "sanofi_SAN": { "price_eur": 70.81, "label": "Sanofi" },
+    "stellantis_STLAP": { "price_eur": 3.8825, "label": "Stellantis" },
+    "btc_eur": { "price_eur": 75500, "label": "Bitcoin" },
+    "eth_eur": { "price_eur": 2398, "label": "Ethereum" }
   },
   "eres": {
     "last_checked": "2026-07-28",
@@ -19,5 +19,5 @@
       "eres_sycomore_europe_QS0009133891_PEI": { "value_eur": 1152, "label": "ERES Sycomore Europe Eco. (PEI)" }
     }
   },
-  "note": "Relevé du 27.09.2026 : accès direct (WebFetch) aux sites financiers toujours bloqué par le proxy réseau de l'environnement, prix issus de recherches web agrégées (clôtures du 25.09 pour la plupart des actions/ETF, dernière cotation fiable recoupée du 22.09 pour Stellantis, crypto en continu ~27.09). Aucun seuil franchi cette semaine — mouvements les plus marqués : BTC +6,7 % et ETH +5,2 %, tous deux sous leur seuil ±15 %. Divergences de prix inhabituellement fortes cette semaine sur Sanofi (extrait isolé à 76,96 € écarté, retenu ~72,56 € recoupé par deux sources indépendantes) et Stellantis (extraits allant de 4,00 € à 7,99 € selon la capture — la fourchette basse ~4,17 € retenue après recoupement avec le range 52 semaines confirmé par plusieurs sources et une analyse technique Boursorama plaçant le titre sous sa MM50 à 4,76 €). ERES : sixième recherche consécutive tentée (61 jours écoulés depuis le 28.07, largement ≥28 jours) mais toujours aucune VL fiable et récente trouvée pour les 3 fonds — cette semaine, cause identifiée : l'ensemble des sources pertinentes (zonebourse, sicavonline, quantalys, eres-group) étaient bloquées par le proxy réseau, limitant la recherche à des extraits web peu fiables ; eres_last_checked non mis à jour, valeurs du 28.07 conservées, nouvelle tentative prévue au prochain relevé (04.10.2026). Fait notable identifié cette semaine : le dossier PLF 2027/éligibilité PEA des ETF synthétiques exposés hors Europe est clos côté annonce gouvernementale — le gouvernement a confirmé le 26.08.2026 (réitéré le 01.09.2026) qu'il ne retirera pas cette éligibilité (84 % des PEA suivis par Finary contiennent au moins un ETF synthétique) ; dépôt du PLF 2027 toujours prévu le 30.09.2026 (date limite légale LOLF : 06.10.2026)."
+  "note": "Relevé du 04.10.2026 : accès direct (WebFetch) aux sites financiers (Boursorama, CoinGecko, sicavonline, zonebourse, funds360.euronext) toujours bloqué par le proxy réseau de l'environnement — mêmes domaines qu'aux relevés précédents. Prix issus d'extraits de recherche web agrégés, recoupés entre plusieurs sources quand possible : ETF/actions via cotations Boursorama du 02.10.2026 17h35 (clôture, marchés fermés le week-end du 03-04.10) ; Stellantis confirmé par deux requêtes indépendantes à 3,8825 € (02.10, +0,94 % séance, précédent 3,8465 €) ; Sanofi 70,81 € (02.10 clôture, -3,13 %, après un rebond à 73,10 € le 01.10 porté par l'annonce d'extension du partenariat immuno-oncologie avec Regeneron) ; crypto en cotation continue, BTC/EUR et ETH/EUR établis par moyenne de plusieurs plateformes EUR directes (CoinGecko, Coinbase, CoinMarketCap, Kraken, BTCDirect, Paybis) le 04.10, fourchettes respectives ≈75 065-76 000 € et ≈2 381-2 420 €. Aucun seuil franchi cette semaine — mouvement le plus marqué : Stellantis -7,0 % vs 27.09 (seuil ±10 % non franchi), suivi de BTC +1,5 % et ETH +1,6 %. ERES : septième recherche consécutive tentée (69 jours écoulés depuis le 28.07, largement ≥28 jours) mais toujours aucune VL fiable et récente trouvée pour les 3 fonds — sources pertinentes (zonebourse, sicavonline, funds360.euronext, eres-group) inaccessibles en lecture directe (proxy réseau) ; pour ERES Sélection Monétaire P, le même extrait VL=1 050,18 € daté du 28.01.2026 déjà écarté la semaine dernière est ressorti à nouveau, toujours non confirmable par lecture directe et de toute façon trop ancien ; rien de neuf pour les deux autres fonds. Valeurs du 28.07 conservées, nouvelle tentative prévue au prochain relevé (11.10.2026). Fait notable identifié cette semaine : le rapport CPI US de septembre, initialement attendu le 14.10, a été repoussé au 24.10.2026 en raison du shutdown budgétaire fédéral (BLS en fonctionnement très réduit depuis le 01.10) — publication maintenue à cette date pour permettre le calcul de la revalorisation (COLA) de la Social Security."
 }
